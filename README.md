@@ -8,11 +8,11 @@ Para acessar o PgAdmin, acesse a URL:
 
 ### Credenciais
 
-* **Para fazer o Login:**
-Email: acqua@example.com
-PassWord: acqua
+* **Para fazer o Login:**  
+**Email**: acqua@example.com  
+**PassWord**: acqua  
 
-* **Para acessa o banco de dados:**
-User: acqua
-PassWord: acqua
-Host: postgres_geospatial
+* **Para acessa o banco de dados:**  
+**User**: acqua  
+**PassWord**: acqua  
+**Host**: postgres_geospatial  
