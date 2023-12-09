@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  postgres_geospatial:
+    image: postgis/postgis
+    environment:
+      POSTGRES_DB: geospatial_db
+      POSTGRES_USER: acqua
+      POSTGRES_PASSWORD: acqua
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      # - ./bin/mydb.dump:/docker-entrypoint-initdb.d/mybd.dump
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: acqua@example.com
+      PGADMIN_DEFAULT_PASSWORD: acqua
+    ports:
+      - "5050:80"
+
+volumes:
+  pg_data:
