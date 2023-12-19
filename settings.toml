@@ -1,0 +1,15 @@
+[development]
+DB_USER="acqua"
+DB_PASSWORD="acqua"
+DB_HOST="postgres_poc"
+DB_PORT=5432
+DB_NAME="monitora"
+DATABASE="postgresql"
+
+[production]
+DB_USER="acqua"
+DB_PASSWORD="acqua"
+DB_HOST="localhost"
+DB_PORT=5432
+DB_NAME="geospatial_db"
+DATABASE="postgresql"
