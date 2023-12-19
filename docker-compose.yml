@@ -21,5 +21,30 @@ services:
     ports:
       - "5050:80"
 
+  postgres_poc:
+    image: postgres:latest
+    container_name: postgres_exemplo
+    environment:
+      POSTGRES_USER: acqua
+      POSTGRES_PASSWORD: acqua
+      POSTGRES_DB: monitora
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./scripts/:/docker-entrypoint-initdb.d
+
+  backend:
+    build:
+      dockerfile: ./docker/app.dockerfile
+      context: .
+    container_name: backend
+    volumes:
+      - ./:/src/app
+    ports:
+      - "3333:3333"
+    depends_on:
+      - postgres_poc
+    tty: true
+
 volumes:
   pg_data:
